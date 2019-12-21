@@ -96,7 +96,6 @@ export class NewtripPage implements OnInit {
   }
 
   tourism() {
-    this.things.push("tourism");
     if (this.chips.tourism.selected) {
       this.things.splice(this.things.indexOf('tourism'), 1);
       this.chips.tourism.selected = !this.chips.tourism.selected;
@@ -111,7 +110,6 @@ export class NewtripPage implements OnInit {
   }
 
   shopping() {
-    this.things.push("shopping");
     if (this.chips.shopping.selected) {
       this.things.splice(this.things.indexOf('shopping'), 1);
       this.chips.shopping.selected = !this.chips.shopping.selected;
