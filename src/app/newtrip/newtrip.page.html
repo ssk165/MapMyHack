@@ -1,0 +1,85 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Plan New Trip</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Distance</ion-label>
+    <ion-text right>{{distance}} KM</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="pin"></ion-icon>
+    <ion-range [(ngModel)]="distance" min="0" max="100" step="5" snaps="true" pin="true">
+    </ion-range>
+    <ion-icon name="pin" color="dark"></ion-icon>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Total Travel Time</ion-label>
+    <ion-text right>{{time}} Min</ion-text>
+  </ion-item>
+  <ion-item>
+    <ion-icon name="time"></ion-icon>
+    <ion-range [(ngModel)]="time" min="0" max="100" step="5" snaps="true" pin="true">
+    </ion-range>
+    <ion-icon name="time" color="dark"></ion-icon>
+  </ion-item>
+
+
+  <ion-list>
+    <ion-radio-group (ionChange)="checkValue($event)">
+      <ion-list-header>
+        <ion-label>How are you travelling ?</ion-label>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label>Walking</ion-label>
+        <ion-radio slot="start" value="walking" checked></ion-radio>
+        <ion-icon name="walk" color="dark"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Two wheeler</ion-label>
+        <ion-radio slot="start" value="two_wheeler"></ion-radio>
+        <ion-icon name="bicycle" color="dark"></ion-icon>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Four Wheeler</ion-label>
+        <ion-radio slot="start" value="four_wheeler"></ion-radio>
+        <ion-icon name="car" color="dark"></ion-icon>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label>Things you might try ?</ion-label>
+  </ion-item>
+  <div>
+    <ion-chip fill="outline" [ngStyle]="{'background-color': chips.dining.color}" (click)="dining()">
+      <ion-icon name="pizza" [ngStyle]="{'color': chips.dining.textnicon}"></ion-icon>
+      <ion-label [ngStyle]="{'color': chips.dining.textnicon}">Dining</ion-label>
+    </ion-chip>
+    <ion-chip fill="outline" color="danger" (click)="entertainment()">
+      <ion-icon name="videocam"></ion-icon>
+      <ion-label>Entertainment</ion-label>
+    </ion-chip>
+    <ion-chip fill="outline" color="tertiary" (click)="adventure()">
+      <ion-icon name="flash"></ion-icon>
+      <ion-label>Adventure</ion-label>
+    </ion-chip>
+    <ion-chip fill="outline" color="success" (click)="tourism()">
+      <ion-icon name="train"></ion-icon>
+      <ion-label>Tourism</ion-label>
+    </ion-chip>
+    <ion-chip fill="outline" color="warning" (click)="shopping()">
+      <ion-icon name="cart"></ion-icon>
+      <ion-label>Shopping</ion-label>
+    </ion-chip>
+  </div>
+</ion-content>
