@@ -18,6 +18,10 @@ const routes: Routes = [
   {
     path: 'newtrip',
     loadChildren: () => import('./newtrip/newtrip.module').then( m => m.NewtripPageModule)
+  },
+  {
+    path: 'maptest',
+    loadChildren: () => import('./maptest/maptest.module').then( m => m.MaptestPageModule)
   }
 ];
 
