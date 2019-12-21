@@ -65,21 +65,23 @@
       <ion-icon name="pizza" [ngStyle]="{'color': chips.dining.textnicon}"></ion-icon>
       <ion-label [ngStyle]="{'color': chips.dining.textnicon}">Dining</ion-label>
     </ion-chip>
-    <ion-chip fill="outline" color="danger" (click)="entertainment()">
-      <ion-icon name="videocam"></ion-icon>
-      <ion-label>Entertainment</ion-label>
+    <ion-chip fill="outline" [ngStyle]="{'background-color': chips.entertainment.color}" (click)="entertainment()">
+      <ion-icon name="videocam" [ngStyle]="{'color': chips.entertainment.textnicon}"></ion-icon>
+      <ion-label [ngStyle]="{'color': chips.entertainment.textnicon}">Entertainment</ion-label>
     </ion-chip>
-    <ion-chip fill="outline" color="tertiary" (click)="adventure()">
-      <ion-icon name="flash"></ion-icon>
-      <ion-label>Adventure</ion-label>
+    <ion-chip fill="outline" [ngStyle]="{'background-color': chips.adventure.color}" (click)="adventure()">
+      <ion-icon name="flash" [ngStyle]="{'color': chips.adventure.textnicon}"></ion-icon>
+      <ion-label [ngStyle]="{'color': chips.adventure.textnicon}">Adventure</ion-label>
     </ion-chip>
-    <ion-chip fill="outline" color="success" (click)="tourism()">
-      <ion-icon name="train"></ion-icon>
-      <ion-label>Tourism</ion-label>
+    <ion-chip fill="outline" [ngStyle]="{'background-color': chips.tourism.color}" (click)="tourism()">
+      <ion-icon name="train" [ngStyle]="{'color': chips.tourism.textnicon}"></ion-icon>
+      <ion-label [ngStyle]="{'color': chips.tourism.textnicon}">Tourism</ion-label>
     </ion-chip>
-    <ion-chip fill="outline" color="warning" (click)="shopping()">
-      <ion-icon name="cart"></ion-icon>
-      <ion-label>Shopping</ion-label>
+    <ion-chip fill="outline" [ngStyle]="{'background-color': chips.shopping.color}" (click)="shopping()">
+      <ion-icon name="cart" [ngStyle]="{'color': chips.shopping.textnicon}"></ion-icon>
+      <ion-label [ngStyle]="{'color': chips.shopping.textnicon}">Shopping</ion-label>
     </ion-chip>
   </div>
+
+  <ion-button color="primary" expand="full" (click)="submit()">Primary</ion-button>
 </ion-content>
